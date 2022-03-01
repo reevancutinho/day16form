@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Table</title>
+</head>
+<body>
+
+    <!-- <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script> -->
+
+   <!-- header section of the page -->
+    <div class="headerss">
+        <h1 id="title">Form</h1>
+        <p id="description">Form to add data into the table</p>
+    </div>
+
+    <div class="userform">
+        <!-- form to enter all the data from user -->
+        <form id="form" name="data">
+
+            <!-- label and input field to enter first name of employee -->
+            <label>First Name : </label><br>
+            <input type="text" name="first" id="first-name" placeholder="enter your first name...">
+            <br>
+
+            <!-- label and input field to enter last name of employee -->
+            <label>Last Name : </label><br>
+            <input type="text" name="last" id="last-name" placeholder="enter your last name...">
+
+            <!-- label and input field to enter address of employee -->
+            <br>
+            <label>Address : </label><br>
+            <textarea name="address" id="address" rows="4" cols="50" placeholder="enter your address..."></textarea>
+            <!-- <input type="textarea" name="address" id="address" placeholder="enter your address..."> -->
+            <!-- <textarea type="textarea" name="address" id="address" placeholder="enter your address..."></textarea> -->
+            <br>
+
+            <!-- label and input field to enter pincode of employee -->
+            <label>Pincode : </label><br>
+            <input type="text" name="pincode" id="pincode" placeholder="pincode...">
+            <br>
+
+            <!-- label and input field to get gender of employee -->
+            <label>Gender : </label>
+            <br>
+            <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label><br>
+            <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label><br>
+            <input type="radio" name="gender" value="prefer not to say" id="ot"><label for="ot">Prefer not to say</label><br>
+            <br>
+
+            <!-- label and input field to get choice of food of employee -->
+            <label>choice of food : </label>
+            <br>
+            <input type="checkbox" name="food" id="food" value="South indian">South indian
+            <input type="checkbox" name="food" id="food" value="North indian">North indian
+            <input type="checkbox" name="food" id="food" value="Chinese">Chinese
+            <input type="checkbox" name="food" id="food" value="Italian">Italian
+            <input type="checkbox" name="food" id="food" value="Mexican">Mexican
+            <br><br>
+
+            <!-- label and input field to enter state of employee -->
+            <label>State : </label><br>
+            <input type="text" name="state" id="state" placeholder="enter your state...">
+            <br>
+
+            <!-- label and input field to enter country of employee -->
+            <label>Country : </label><br>
+            <input type="text" name="country" id="country" placeholder="enter your country...">
+            <br><br>
+
+            <!-- button to submit data of the form, this will call addData() function in javascript -->
+            <input type="button" onclick="addData()" id="submit" class="btn btn-primary" value="submit">
+
+        </form>
+    </div>
+
+    <!-- here added data from form will get displayed -->
+    <div class="user-table">
+        <!-- table to show data added by user-->
+        <table id="table" class="table">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>pincode</th>
+                <th>gender</th>
+                <th>Food choice</th>
+                <th>State</th>
+                <th>Country</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<!-- Link javascript file using below code-->
+<script src="script.js"></script>
+</html>
